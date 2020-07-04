@@ -13,8 +13,7 @@ def tweet(handle, tweet, archive_url, creation_date, idTweets, status):
     if not archive_url.startswith("Não"):
         # print(archive_url)
         status = api.update_status(in_reply_to_status_id = status.id, status = "O bot tentou arquivar o tweet nesse link: " + archive_url)
-
-    time.sleep(135)    
+    
     return status
 
 def tweet_start():
