@@ -2,7 +2,7 @@ import re, time
 import database_auth
 
 def get_handles_to_tweet():
-    sql = "select distinct(handle) from mimic_tweets where erased = 1 and 7c0_tweeted = 0 limit 5;"
+    sql = "select distinct(handle) from mimic_tweets where erased = 1 and 7c0_tweeted = 0;"
     db = database_auth.conecta_banco()
     cursor = db.cursor()
     try:
@@ -17,6 +17,7 @@ def get_handles_to_tweet():
 
 
 def get_tweets_ids(conta):
+    print(conta)
     sql = "select idTweets from mimic_tweets where handle = \"" + conta[0] + "\" and 7c0_tweeted = 0 and erased = 1 order by idTweets asc;"
     db = database_auth.conecta_banco()
     cursor = db.cursor()
