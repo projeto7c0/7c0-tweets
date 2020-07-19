@@ -20,7 +20,7 @@ if __name__ == '__main__':
             id, tweet, handle, archive_url, creation_date = database.retrieve_tweet(tweet_id)
             last_tweet = twitter.tweet(handle, tweet, archive_url, creation_date, id, last_tweet)
             if not qtde_tweets%20:
-                time.sleep(135*20)
+                time.sleep(3600)
         
         database.update_tweeted(tweet_ids)
         twitter.tweet_end_arroba(arroba, last_tweet)
