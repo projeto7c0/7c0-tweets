@@ -5,7 +5,7 @@ from datetime import datetime
 
 def tweet(handle, tweet, archive_url, creation_date, idTweets, status):
     api = twitter_auth.autentica_tweets()
-    status = api.update_status(in_reply_to_status_id = status.id, status = "O tweet com id " + str(idTweets[0]) + " de " + creation_date + " que falava sobre: ")
+    status = api.update_status(in_reply_to_status_id = status.id, status = "O tweet com id " + str(idTweets[0]) + " de " + str(creation_date) + " que falava sobre: ")
     # print(str(idTweets[0]) + " - " + creation_date)
     tweet = str(tweet).replace("//", "/ /")
     status = api.update_status(in_reply_to_status_id = status.id, status = (tweet[0:200]+"..."))
