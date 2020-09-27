@@ -15,7 +15,7 @@ if __name__ == '__main__':
     qtde_tweets = 0
     for candidato in candidatos:
         tweet_ids = database.get_tweets_ids_election(candidato)
-        if len(tweet_ids > 0):
+        if len(tweet_ids) > 0:
             last_tweet = twitter_election.tweet_start_arroba(candidato, len(tweet_ids))
             for tweet_id in tweet_ids:
                 qtde_tweets += 1
