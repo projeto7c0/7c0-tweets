@@ -23,7 +23,7 @@ def tweet(handle, tweet, archive_url, creation_date, idTweets, status):
 
 def tweet_start():
     api = twitter_auth.autentica_tweets_election()
-    status = api.update_status(status=("Começando o relatório às " + datetime.now().isoformat(timespec='minutes') +
+    status = api.update_status(status=("Começando o relatório automatizado às " + datetime.now().isoformat(timespec='minutes') +
                                        ". Os tweets serão espaçados de hora em hora, para evitar que o bot seja bloqueado pelo twitter."))
     # print(datetime.now().isoformat(timespec='minutes'))
 
@@ -32,7 +32,7 @@ def tweet_start():
 
 def tweet_start_arroba(candidato, qtde_tweets):
     api = twitter_auth.autentica_tweets_election()
-    status = api.update_status("Começando a listagem de tweets recuperados para " + candidato[2] + " candidato a " +
+    status = api.update_status("🤖 Começando a listagem de tweets recuperados para " + candidato[2] + " candidato a " +
                                candidato[4] + " de " + candidato[5] + "/" + candidato[6] + " pelo partido " + candidato[3] + ". Sumiram desde a nossa última checagem " + str(qtde_tweets) + " tweets.")
     # print(handle[0] +"  "+ str(qtde_tweets))
 
