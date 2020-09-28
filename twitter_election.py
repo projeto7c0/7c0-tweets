@@ -42,10 +42,10 @@ def tweet_start_arroba(candidato, qtde_tweets):
 def tweet_end(qtde_tweets):
     api = twitter_auth.autentica_tweets_election()
     print(qtde_tweets)
-    status = api.update_status("Fim da triagem diária, foram encontrados " + str(qtde_tweets) + " tweets que sumiram compartilhe o perfil @projeto7c0 para que mais " +
-                               "pessoas saibam o que desaparece da timeline dos políticos.")
+    status = api.update_status("Fim da triagem diária, foram encontrados " + str(qtde_tweets) + " tweets que sumiram compartilhe o perfil @7c0_eleicoes para que mais " +
+                               "pessoas saibam o que desaparece da timeline dos candidatos.")
     status = api.update_status(in_reply_to_status_id=status.id,
-                               status="Quer saber mais sobre o projeto? Acesse https://projeto7c0.com.br/ e veja saiba tudo sobre o projeto")
+                               status="Quer saber mais sobre o projeto? Acesse https://projeto7c0.com.br/ e veja mais sobre o projeto! Ou entre em contato em eleicoes@projeto7c0.com.br")
     status = api.update_status(in_reply_to_status_id=status.id,
                                status="Quer ajudar a financiar a transparência na comunicação da democracia brasileira? Acesse o nosso apoia-se em https://apoia.se/projeto-7c0 e veja como contribuir")
     api.update_status(in_reply_to_status_id=status.id, status="Quer ficar atualizado? Assine a nossa newsletter, que teremos informações quinzenais para você! Para assinar só clicar aqui https://projeto7c0.us20.list-manage.com//subscribe/post?u=984470f280d60b82c247e3d7b&id=00a31b0d4a")
