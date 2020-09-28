@@ -32,7 +32,7 @@ def tweet_start():
 
 def tweet_start_arroba(candidato, qtde_tweets):
     api = twitter_auth.autentica_tweets_election()
-    status = api.update_status("🤖 Começando a listagem de tweets recuperados para " + candidato[2] + " candidato a " +
+    status = api.update_status("🤖 Começando a listagem de tweets recuperados para " + candidato[2] + " candidato/a ao cargo de " +
                                candidato[4] + " de " + candidato[5] + "/" + candidato[6] + " pelo partido " + candidato[3] + ". Sumiram desde a nossa última checagem " + str(qtde_tweets) + " tweets.")
     # print(handle[0] +"  "+ str(qtde_tweets))
 
