@@ -95,7 +95,7 @@ def retrieve_tweet_election(tweet_id):
         db.close()
 
     if value:
-        if value[10]:
+        if value[11]:
             return tweet_id, value[2], value[4], value[11], value[3]
         else:
             return tweet_id, value[2], value[4], "Não arquivado", value[3]
