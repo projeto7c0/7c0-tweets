@@ -38,6 +38,7 @@ def tweet_end(qtde_tweets):
                                "pessoas saibam o que desaparece da timeline dos políticos.")
     status = api.update_status(in_reply_to_status_id = status.id, status = "Quer saber mais sobre o projeto? Acesse https://projeto7c0.com.br/ e veja saiba tudo sobre o projeto")
     status = api.update_status(in_reply_to_status_id = status.id, status = "Quer ajudar a financiar a transparência na comunicação da democracia brasileira? Acesse o nosso apoia-se em https://apoia.se/projeto-7c0 e veja como contribuir")
+    status = api.update_status(in_reply_to_status_id = status.id, status="Quer pagar um café pra gente sem se comprometer mensalmente? Manda um Pix! A chave é pix@projeto7c0.com.br, e qualquer valor é bem vindo!")
     api.update_status(in_reply_to_status_id = status.id, status = "Quer ficar atualizado? Assine a nossa newsletter, que teremos informações quinzenais para você! Para assinar só clicar aqui https://projeto7c0.us20.list-manage.com//subscribe/post?u=984470f280d60b82c247e3d7b&id=00a31b0d4a")
 
 def tweet_end_arroba(arroba, last_tweet):
